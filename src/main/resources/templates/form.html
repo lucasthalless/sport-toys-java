@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Brinquedo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 th:if="${brinquedo.id == null}">Novo Brinquedo</h1>
+    <h1 th:if="${brinquedo.id != null}">Editar Brinquedo</h1>
+    <form th:action="@{/brinquedos/{id}(id=${brinquedo.id})}" th:object="${brinquedo}" method="post">
+        <div class="form-group mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" th:field="*{nome}" class="form-control" id="nome" placeholder="Ex: Bola de Futebol">
+            <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="tipo" class="form-label">Tipo</label>
+            <input type="text" th:field="*{tipo}" class="form-control" id="tipo" placeholder="Ex: Bola">
+            <span th:if="${#fields.hasErrors('tipo')}" th:errors="*{tipo}" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="classificacao" class="form-label">Classificação</label>
+            <input type="text" th:field="*{classificacao}" class="form-control" id="classificacao" placeholder="Ex: 3+">
+            <span th:if="${#fields.hasErrors('classificacao')}" th:errors="*{classificacao}" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="tamanho" class="form-label">Tamanho</label>
+            <input type="text" th:field="*{tamanho}" class="form-control" id="tamanho" placeholder="Ex: Pequeno">
+            <span th:if="${#fields.hasErrors('tamanho')}" th:errors="*{tamanho}" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="number" step="0.01" th:field="*{preco}" class="form-control" id="preco" placeholder="Ex: 29.99">
+            <span th:if="${#fields.hasErrors('preco')}" th:errors="*{preco}" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="/brinquedos" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+</body>
+</html>
