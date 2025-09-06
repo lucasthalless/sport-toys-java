@@ -6,12 +6,6 @@ Este projeto é uma aplicação web MVC desenvolvida com o framework **Spring Bo
 
 O tema foca em brinquedos esportivos, com colunas personalizadas na tabela do banco: Id, Nome, Tipo, Classificação, Tamanho, Preço (ex: Nome: "Bola de Futebol", Tipo: "Bola", Classificação: "3+", Tamanho: "Pequeno", Preço: 29.99).
 
-### Objetivos
-- [ ] Implementar CRUD completo via interface web com Thymeleaf.
-- [ ] Reutilizar persistência em Oracle da Parte I.
-- [ ] Priorizar layout atraente com Bootstrap.
-- [ ] Documentar com prints e explicações.
-
 ### Tecnologias Utilizadas
 - **Spring Boot**: Framework principal para MVC.
 - **Maven**: Gerenciamento de dependências.
@@ -27,7 +21,7 @@ O tema foca em brinquedos esportivos, com colunas personalizadas na tabela do ba
 O projeto foi inicializado via **Spring Initializr** com as dependências: Spring Web, Spring Data JPA, Thymeleaf, Lombok. O driver Oracle foi adicionado manualmente no `pom.xml`.
 
 **Evidência**:
-![Print do Spring Initializr com dependências](assets/print-initializr.jpg)
+![Print do Spring Initializr com dependências](assets/print-initializr.png)
 
 A configuração do banco foi feita em `application.properties`.
 
@@ -46,7 +40,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos`.
 - **Exemplo**: A tabela mostra colunas personalizadas e ações.
 - **Evidência**:
-  ![Lista de Brinquedos](assets/list-brinquedos.jpg)
+  ![Lista de Brinquedos](assets/list-brinquedos.png)
 
 
 ### 2. CREATE (Criar)
@@ -54,8 +48,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos/new` (form) e POST `/brinquedos` (salvar).
 - **Exemplo**: Preencha os campos e clique em "Salvar"; redireciona para lista.
 - **Evidência**:
-  ![Formulário de Criação](assets/form-create.jpg)
-  ![Lista Após Criação](assets/list-after-create.jpg)
+  ![Formulário de Criação](assets/form-create.png)
   
 
 ### 3. UPDATE (Atualizar)
@@ -63,16 +56,14 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos/edit/{id}` (form) e POST `/brinquedos/{id}` (salvar).
 - **Exemplo**: Clique em "Editar" na lista, altere campos e salve.
 - **Evidência**:
-  ![Formulário de Edição](assets/form-edit.jpg)
-  ![Lista Após Edição](assets/list-after-edit.jpg)
-
+  ![Formulário de Edição](assets/form-edit.png)
+  
+  
 ### 4. DELETE (Excluir)
 - **Descrição**: Exclui brinquedo por ID via link.
 - **Endpoint**: GET `/brinquedos/delete/{id}`.
 - **Exemplo**: Clique em "Excluir" na lista; redireciona para lista atualizada.
-- **Evidência**:
-  ![Lista Antes de Excluir](assets/list-before-delete.jpg)
-  ![Lista Após Excluir](assets/list-after-delete.jpg)
+
 
 ## Uso de Thymeleaf e Layout
 - Thymeleaf foi usado para vinculação dinâmica de dados (`th:each`, `th:field`) e ações (`th:action`, `th:href`).
