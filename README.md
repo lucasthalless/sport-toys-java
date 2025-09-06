@@ -21,7 +21,7 @@ O tema foca em brinquedos esportivos, com colunas personalizadas na tabela do ba
 O projeto foi inicializado via **Spring Initializr** com as dependências: Spring Web, Spring Data JPA, Thymeleaf, Lombok. O driver Oracle foi adicionado manualmente no `pom.xml`.
 
 **Evidência**:
-![Print do Spring Initializr com dependências](assets/print-initializr.png)
+![Print do Spring Initializr com dependências](https://github.com/lucasthalless/sport-toys-java/blob/main/src/assets/spring-initializr.png)
 
 A configuração do banco foi feita em `application.properties`.
 
@@ -40,7 +40,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos`.
 - **Exemplo**: A tabela mostra colunas personalizadas e ações.
 - **Evidência**:
-  ![Lista de Brinquedos](assets/list-brinquedos.png)
+  ![Lista de Brinquedos](https://github.com/lucasthalless/sport-toys-java/blob/main/src/assets/list-brinquedos.png)
 
 
 ### 2. CREATE (Criar)
@@ -48,7 +48,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos/new` (form) e POST `/brinquedos` (salvar).
 - **Exemplo**: Preencha os campos e clique em "Salvar"; redireciona para lista.
 - **Evidência**:
-  ![Formulário de Criação](assets/form-create.png)
+  ![Formulário de Criação](https://github.com/lucasthalless/sport-toys-java/blob/main/src/assets/form-create.png)
   
 
 ### 3. UPDATE (Atualizar)
@@ -56,7 +56,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 - **Endpoint**: GET `/brinquedos/edit/{id}` (form) e POST `/brinquedos/{id}` (salvar).
 - **Exemplo**: Clique em "Editar" na lista, altere campos e salve.
 - **Evidência**:
-  ![Formulário de Edição](assets/form-edit.png)
+  ![Formulário de Edição](https://github.com/lucasthalless/sport-toys-java/blob/main/src/assets/form-edit.png)
   
   
 ### 4. DELETE (Excluir)
