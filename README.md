@@ -84,4 +84,4 @@ Vídeo mostrando as funcionalidades CRUD na interface web, endpoints e deploy:
 1. Clone o repositório: `git clone https://github.com/lucasthalless/sport-toys-java`.
 2. Configure o Oracle com a tabela `TDS_MVC_TB_Brinquedos`.
 3. Rode o projeto: `./mvnw spring-boot:run`.
-4. Acesse `http://localhost:8080/brinquedos` no navegador.
+4. Acesse `http://localhost:8081/brinquedos` no navegador.

@@ -1,7 +1,6 @@
 # Etapa de build com Maven
 FROM maven:3.8.6-eclipse-temurin-17-alpine AS build
 
-# Define o diretório de trabalho
 WORKDIR /app
 
 # Copia o pom.xml e baixa dependências
@@ -24,8 +23,7 @@ VOLUME /tmp
 # Copia o JAR gerado da etapa de build
 COPY --from=build /app/target/*.jar app.jar
 
-# Porta padrão do Spring Boot
-EXPOSE 8080
+EXPOSE 8081
 
-# Comando para executar o JAR, incluindo o driver Oracle no classpath
-ENTRYPOINT ["java", "-cp", "/app/lib/ojdbc8.jar:/app/app.jar", "/src/main/java/br/com/fiap/toys/SportToysApplication"]
+# Comando para executar o JAR
+ENTRYPOINT ["java", "-Dserver.port=8081", "-jar", "app.jar"]
