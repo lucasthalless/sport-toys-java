@@ -24,9 +24,6 @@ VOLUME /tmp
 # Copia o JAR gerado da etapa de build
 COPY --from=build /app/target/*.jar app.jar
 
-# Copia o driver Oracle (se necessário, ajuste conforme o pom.xml)
-COPY lib/ojdbc8.jar /app/lib/ojdbc8.jar
-
 # Porta padrão do Spring Boot
 EXPOSE 8080
 
