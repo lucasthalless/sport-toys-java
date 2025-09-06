@@ -74,7 +74,7 @@ A aplicação opera em `/brinquedos`. Abaixo, cada operação CRUD é descrita c
 
 ## Deploy
 O projeto foi implantado na plataforma **Render**. A URL de produção é:
-- **[Link do Deploy](#)**
+- **[Link do Deploy](https://sport-toys-java.onrender.com/brinquedos)**
 
 ## Vídeo de Demonstração
 Vídeo mostrando as funcionalidades CRUD na interface web, endpoints e deploy:
