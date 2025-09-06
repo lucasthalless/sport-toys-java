@@ -28,4 +28,4 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Comando para executar o JAR, incluindo o driver Oracle no classpath
-ENTRYPOINT ["java", "-cp", "/app/lib/ojdbc8.jar:/app/app.jar", "/src/main/java/br/com/fiap/toys/SportToysApplication.java"]
+ENTRYPOINT ["java", "-cp", "/app/lib/ojdbc8.jar:/app/app.jar", "/src/main/java/br/com/fiap/toys/SportToysApplication"]
