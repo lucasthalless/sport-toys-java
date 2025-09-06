@@ -78,7 +78,7 @@ O projeto foi implantado na plataforma **Render**. A URL de produção é:
 
 ## Vídeo de Demonstração
 Vídeo mostrando as funcionalidades CRUD na interface web, endpoints e deploy:
-- **[Link do Vídeo](#)**
+- **[Link do Vídeo](https://youtu.be/PmFR6Qm97k8)**
 
 ## Instruções de Uso
 1. Clone o repositório: `git clone https://github.com/lucasthalless/sport-toys-java`.
